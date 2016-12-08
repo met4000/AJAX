@@ -1,7 +1,7 @@
 function Communication(){}
 var AJAX = new Communication();
 //data is optional
-AJAX.prototype.get = function (target, set, data) {
+Communication.prototype.get = function (target, set, data) {
 	if (target === undefined) { target = "index.php"; }
 	if (set === undefined) { set = false; }
 	if (data === undefined) { data = ""; }
@@ -20,6 +20,6 @@ AJAX.prototype.get = function (target, set, data) {
 	xhttp.send();
 	if (!set) { return this.responseText; }
 }
-AJAX.prototype.post = function (target, set, data) {
+Communication.prototype.post = function (target, set, data) {
 	
 }
